@@ -38,10 +38,6 @@ namespace GuitarShop.Controllers
                     .OrderBy(p => p.ProductID).ToList();
             }
 
-            // use ViewBag to pass data to view
-            ViewBag.Categories = categories;
-            ViewBag.SelectedCategoryName = id;
-
             // bind products to view
             return View(products);
         }
