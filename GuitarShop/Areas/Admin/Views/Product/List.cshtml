@@ -12,7 +12,7 @@
                 @if (Model.SelectedCategory == "All") {
                     <text>active</text>
                 } ">All</a>
-            @foreach (Category c in ViewBag.Categories)
+            @foreach (Category c in Model.Categories)
             {
                 <a asp-action="List" asp-route-id="@c.Name"
                    class="list-group-item
