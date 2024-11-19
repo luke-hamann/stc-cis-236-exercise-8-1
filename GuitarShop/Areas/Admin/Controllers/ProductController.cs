@@ -95,6 +95,7 @@ namespace GuitarShop.Areas.Admin.Controllers
                 else                                  // existing product
                 {
                     context.Products.Update(product);
+                    TempData["UserMessage"] = $"You just updated the product {product.Name}";
                 }
                 context.SaveChanges();
                 return RedirectToAction("List");
