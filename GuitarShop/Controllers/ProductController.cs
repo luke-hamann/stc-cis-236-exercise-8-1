@@ -45,8 +45,7 @@ namespace GuitarShop.Controllers
                 SelectedCategory = id
             };
 
-            // bind products to view
-            return View(products);
+            return View(model);
         }
 
         public IActionResult Details(int id)
