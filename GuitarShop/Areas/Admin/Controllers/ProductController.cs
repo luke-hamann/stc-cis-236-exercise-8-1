@@ -90,6 +90,7 @@ namespace GuitarShop.Areas.Admin.Controllers
                 if (product.ProductID == 0)           // new product
                 {
                     context.Products.Add(product);
+                    TempData["UserMessage"] = $"You just added the product {product.Name}";
                 }
                 else                                  // existing product
                 {
