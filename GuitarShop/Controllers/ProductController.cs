@@ -38,6 +38,13 @@ namespace GuitarShop.Controllers
                     .OrderBy(p => p.ProductID).ToList();
             }
 
+            var model = new ProductListViewModel
+            {
+                Categories = categories,
+                Products = products,
+                SelectedCategory = id
+            };
+
             // bind products to view
             return View(products);
         }
