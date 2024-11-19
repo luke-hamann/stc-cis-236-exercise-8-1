@@ -12,7 +12,7 @@
                 All
             </a>
 
-            @foreach (Category c in ViewBag.Categories)
+            @foreach (Category c in Model.Categories)
             {
 
                     <a asp-controller="Product" asp-action="List" asp-route-id="@c.Name" 
